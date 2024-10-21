@@ -72,6 +72,7 @@ alias killnvim='ps -ef | grep "nvim" | grep -v grep | awk '{print $2}' | xargs k
 alias spotx='bash <(curl -sSL https://spotx-official.github.io/run.sh)'
 alias leet='nvim leetcode.nvim'
 alias resume='~/mdtopdf/run.sh'
+alias upwas='curl -L https://github.com/yashvardhan-kukreja/whatsupstream/archive/v0.1.tar.gz | tar xvz && cd whatsupstream-* && sudo make install'
 
 delete() {
   for file in "$@"; do
