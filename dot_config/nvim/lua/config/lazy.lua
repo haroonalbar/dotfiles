@@ -9,6 +9,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  {
+    "thenewvu/vim-colors-arthur",
+    priority = 1000, -- Load this before other plugins
+    config = function()
+      vim.cmd.colorscheme("arthur")
+    end,
+  },
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
@@ -24,7 +31,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  -- install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
