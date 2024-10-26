@@ -10,16 +10,16 @@ return {
         -- vim.opt.laststatus = 0
         -- Hide line numbers
         vim.opt.number = false
-        vim.opt.relativenumber = false
-        -- Disable list mode (which can show special characters for whitespace)
         vim.opt.list = false
+        -- vim.opt.relativenumber = false
+        -- Disable list mode (which can show special characters for whitespace)
       end,
       on_close = function()
+        vim.opt.number = true
+        vim.opt.list = true
         -- vim.fn.system("tmux set-option status on")
         -- vim.opt.laststatus = 2
-        vim.opt.number = true
-        vim.opt.relativenumber = true
-        vim.opt.list = true
+        -- vim.opt.relativenumber = true
       end,
       -- plugins = {
       --   enabled = true,
