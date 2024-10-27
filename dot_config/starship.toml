@@ -10,8 +10,8 @@ right_format = '''($jobs)($status)($cmd_duration)$time'''
 # format = '[$user](blue)'
 # show_always = true
 
-[hostname]
-format = '[@$hostname](cyan)'
+# [hostname]
+# format = '[@$hostname](cyan)'
 
 [character]
 success_symbol = '[❯](bold green)'
