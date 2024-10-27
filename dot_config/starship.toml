@@ -1,10 +1,15 @@
 # starship config for thyme
 # https://github.com/chenhao-ye/thyme
 
+# format='''[\[$username($hostname)\]](white) $directory ([\[$git_branch(:$git_commit)(:$git_status)(:$git_state)\]](yellow))$line_break$character$docker_context'''
+
 add_newline = true
-format='''$directory ([\[$git_branch(:$git_commit)(:$git_status)(:$git_state)\]](yellow))$line_break$character'''
-# format='''[\[$username($hostname)\]](white) $directory ([\[$git_branch(:$git_commit)(:$git_status)(:$git_state)\]](yellow))$line_break$character'''
+
+format = '''$directory ([\[$git_branch(:$git_commit)(:$git_status)(:$git_state)\]](yellow))$fill$golang$python$nodejs$rust$java$ruby$php$javascript$typescript$c$cpp$csharp$kotlin$swift$scala$haskell$elixir$dart$line_break$character'''
 right_format = '''($jobs)($status)($cmd_duration)$time'''
+
+[fill]
+symbol = ' '
 
 # [username]
 # format = '[$user](blue)'
@@ -61,3 +66,49 @@ format = '[\[$symbol(:$number)\]](cyan)'
 symbol = '⚙'
 symbol_threshold = 1
 number_threshold = 2
+
+
+# langages
+
+[golang]
+format = '[go $version](bold cyan) '
+
+[python]
+format = '[py $version](bold yellow) '
+
+[nodejs]
+format = '[njs $version](bold green) '
+
+[rust]
+format = '[rs $version](bold red) '
+
+[java]
+format = '[java $version](bold blue) '
+
+[ruby]
+format = '[rb $version](bold magenta) '
+
+[php]
+format = '[php $version](bold purple) '
+
+[c]
+format = '[c $version](bold blue) '
+
+[kotlin]
+format = '[kt $version](bold orange) '
+
+[swift]
+format = '[swift $version](bold red) '
+
+[scala]
+format = '[scala $version](bold red) '
+
+[haskell]
+format = '[hs $version](bold purple) '
+
+[elixir]
+format = '[ex $version](bold purple) '
+
+[dart]
+format = '[dart $version](bold blue) '
+
