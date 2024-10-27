@@ -44,7 +44,7 @@ disabled = false
 format = '[$time](green)'
 time_format = '  %I:%M %p'
 use_12hr = true
-disabled = false
+disabled = true
 
 [cmd_duration]
 format = '[\[$duration\]](yellow)'
