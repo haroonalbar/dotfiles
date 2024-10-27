@@ -2,5 +2,3 @@
 vim.opt.termguicolors = true
 
 require("nvim-highlight-colors").setup({})
-
-vim.cmd("colorscheme catppuccin")
