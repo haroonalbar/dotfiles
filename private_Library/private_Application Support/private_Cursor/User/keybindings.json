@@ -29,7 +29,7 @@
     "command": "-workbench.action.moveEditorRightInGroup"
   },
   {
-    "key": "shift+l",
+    "key": "cmd+]",
     "command": "workbench.action.nextEditor"
   },
   {
@@ -37,7 +37,7 @@
     "command": "-workbench.action.nextEditor"
   },
   {
-    "key": "shift+h",
+    "key": "cmd+[",
     "command": "workbench.action.previousEditor"
   },
   {
@@ -70,12 +70,16 @@
   },
   {
     "key": "cmd+[",
-    "command": "editor.action.outdentLines",
+    "command": "-editor.action.outdentLines",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+[",
-    "command": "-editor.action.outdentLines",
-    "when": "editorTextFocus && !editorReadonly"
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+    "when": "inQuickOpen && inRecentFilesPicker"
   }
 ]

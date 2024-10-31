@@ -74,7 +74,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.accessibilitySupport": "off",
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Everforest Dark",
   "animations.Install-Method": "Apc Customize UI++",
   "update.mode": "manual",
   "apc.imports": [
@@ -100,5 +100,11 @@
   // "go.inlayHints.parameterNames": false,
   "workbench.reduceMotion": "on",
   "todohighlight.isEnable": true,
-  "editor.cursorBlinking": "solid"
+  "editor.cursorBlinking": "solid",
+  "everforest.darkContrast": "hard",
+  "everforest.darkCursor": "orange",
+  "todo.embedded.providers.ag.regex": "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|)",
+  "todo.embedded.providers.rg.args": "--ignore-case",
+  "todo.embedded.providers.rg.regex": "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|WARN)",
+  "todo.embedded.regex": "(?:<!-- *)?(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|WARN)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|\\{!|\\{\\{!--|\\{\\{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^@\\n]+)?))"
 }
