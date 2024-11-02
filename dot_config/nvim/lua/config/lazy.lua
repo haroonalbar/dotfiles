@@ -16,6 +16,15 @@ require("lazy").setup({
       vim.cmd.colorscheme("arthur")
     end,
   },
+  {
+    "lualine",
+    sections = {
+      lualine_c = { "filename" },
+      lualine_x = { "encoding", "fileformat", "filetype" },
+      lualine_y = { "progress" },
+      lualine_z = { "location" },
+    },
+  },
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },

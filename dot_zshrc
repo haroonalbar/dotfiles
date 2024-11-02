@@ -309,3 +309,5 @@ alias yesdesk='defaults write com.apple.finder CreateDesktop true && killall Fin
 # hide
 alias hidet='tmux set-option status off'
 alias showt='tmux set-option status on'
+# deno
+. "/Users/haroonalbar/.deno/env"
