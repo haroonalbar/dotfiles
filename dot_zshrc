@@ -1,8 +1,8 @@
 export EDITOR="nvim"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-# magisk
-export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
+# # magisk
+# export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -21,12 +21,12 @@ source $HOME/.ani-cli.zsh
 
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
 
 
 #the fuck
@@ -71,7 +71,7 @@ alias killnvim='ps -ef | grep "nvim" | grep -v grep | awk '{print $2}' | xargs k
 alias spotx='bash <(curl -sSL https://spotx-official.github.io/run.sh)'
 alias leet='nvim leetcode.nvim'
 alias resume='~/mdtopdf/run.sh'
-alias upwas='curl -L https://github.com/yashvardhan-kukreja/whatsupstream/archive/v0.1.tar.gz | tar xvz && cd whatsupstream-* && sudo make install'
+# alias upwas='curl -L https://github.com/yashvardhan-kukreja/whatsupstream/archive/v0.1.tar.gz | tar xvz && cd whatsupstream-* && sudo make install'
 
 delete() {
   for file in "$@"; do
@@ -228,6 +228,9 @@ eval "$(starship init zsh)"
 
 # postgresql
 export PATH="/opt/homebrew/Cellar/postgresql@16/16.3/share/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+# mysql
+export PATH=${PATH}:/usr/local/mysql/bin/
 
 # golang
 # export GOPATH=$HOME/go
@@ -240,67 +243,57 @@ export PATH=$PATH:/Users/haroonalbar/go/bin
 # for tailwind cli
 export PATH=$PATH:/Users/haroonalbar/bin
 
-# postgres
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+# deno
+. "/Users/haroonalbar/.deno/env"
 
 
-# Define the work function
-work() {
-    echo "work" > ~/.current_mode
-}
-
-# Define the fun function
-fun() {
-    cow_files=($(cowsay -l | tail -n +2 | tr ' ' '\n'))
-    
-    # Check if the cow_files array is not empty
-    if [ ${#cow_files[@]} -eq 0 ]; then
-        echo "No cow files found!"
-        return 1
-    fi
-    
-    # Select a random cow file
-    random_cow=${cow_files[RANDOM % ${#cow_files[@]}]}
-    
-    # Check if the selected cow file exists
-    if ! cowsay -f "$random_cow" < /dev/null &> /dev/null; then
-        echo "Selected cow file '$random_cow' does not exist!"
-        return 1
-    fi
-    
-    # Run fortune with the selected cow file
-    fortune | cowsay -f "$random_cow"
-    echo "fun" > ~/.current_mode
-}
-
-# Check the current mode and run the appropriate function
-if [[ -f ~/.current_mode ]]; then
-    current_mode=$(cat ~/.current_mode)
-    if [[ $current_mode == "fun" ]]; then
-        fun
-    else
-        work
-    fi
-else
-    # Default to work if no mode is set
-    work
-fi
+# # Define the work function
+# work() {
+#     echo "work" > ~/.current_mode
+# }
+#
+# # Define the fun function
+# fun() {
+#     cow_files=($(cowsay -l | tail -n +2 | tr ' ' '\n'))
+#
+#     # Check if the cow_files array is not empty
+#     if [ ${#cow_files[@]} -eq 0 ]; then
+#         echo "No cow files found!"
+#         return 1
+#     fi
+#
+#     # Select a random cow file
+#     random_cow=${cow_files[RANDOM % ${#cow_files[@]}]}
+#
+#     # Check if the selected cow file exists
+#     if ! cowsay -f "$random_cow" < /dev/null &> /dev/null; then
+#         echo "Selected cow file '$random_cow' does not exist!"
+#         return 1
+#     fi
+#
+#     # Run fortune with the selected cow file
+#     fortune | cowsay -f "$random_cow"
+#     echo "fun" > ~/.current_mode
+# }
+#
+# # Check the current mode and run the appropriate function
+# if [[ -f ~/.current_mode ]]; then
+#     current_mode=$(cat ~/.current_mode)
+#     if [[ $current_mode == "fun" ]]; then
+#         fun
+#     else
+#         work
+#     fi
+# else
+#     # Default to work if no mode is set
+#     work
+# fi
 
 # Colourise go test
-go_test() {
+gotest() {
   go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
 }
 
-export PATH=${PATH}:/usr/local/mysql/bin/
-
-# jobs with pwd
-jd() {
-    jobs -l | while read line; do
-        job_id=$(echo $line | awk '{print $2}' | tr -d '[]')
-        echo -n "$line "
-        echo "$(pwd -P $job_id)"
-    done
-}
 
 # Mac setups alias
 # Desktop clean
@@ -309,5 +302,4 @@ alias yesdesk='defaults write com.apple.finder CreateDesktop true && killall Fin
 # hide
 alias hidet='tmux set-option status off'
 alias showt='tmux set-option status on'
-# deno
-. "/Users/haroonalbar/.deno/env"
+
