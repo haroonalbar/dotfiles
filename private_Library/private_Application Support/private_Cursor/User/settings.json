@@ -1,110 +1,194 @@
 {
-  "tabnine.experimentalAutoImports": true,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.iconTheme": "file-icons",
-  "git.autofetch": true,
-  "python.formatting.provider": "black",
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "atomKeymap.promptV3Features": true,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.formatOnPaste": true,
-  "redhat.telemetry.enabled": false,
-  "terminal.integrated.defaultProfile.windows": "profile",
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
+    "tabnine.experimentalAutoImports": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "python.formatting.provider": "black",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.defaultProfile.windows": "profile",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "profile": {
+            "path": "C:\\WINDOWS\\System32\\cmd.exe",
+            "args": []
+        }
     },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/usr/bin/flatpak-spawn",
+            "args": [
+                "--host",
+                "--env=TERM=xterm-256color",
+                "bash"
+            ]
+        }
     },
-    "Git Bash": {
-      "source": "Git Bash"
+    "workbench.colorTheme": "Everforest Dark",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": true,
+    "settingsSync.ignoredExtensions": [
+        "asvetliakov.vscode-neovim",
+        "nagytech.harpoon"
+    ],
+    "emmet.includeLanguages": {
+        "njk": "html",
+        "liquid": "html"
     },
-    "profile": {
-      "path": "C:\\WINDOWS\\System32\\cmd.exe",
-      "args": []
-    }
-  },
-  "bracketPairColorizer.depreciation-notice": false,
-  "vs-kubernetes": {
-    "vscode-kubernetes.helm-path.windows": "C:\\Users\\harun\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
-    "vscode-kubernetes.helm-path-mac": "/Users/haroonalbar/.vs-kubernetes/tools/helm/darwin-arm64/helm",
-    "vscode-kubernetes.kubectl-path-mac": "/Users/haroonalbar/.vs-kubernetes/tools/kubectl/kubectl",
-    "vscode-kubernetes.minikube-path-mac": "/Users/haroonalbar/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
-  },
-  "solidity.compileUsingRemoteVersion": "v0.8.8+commit.dddeac2f",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  "editor.defaultFormatter": "golang.go",
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "/usr/bin/flatpak-spawn",
-      "args": ["--host", "--env=TERM=xterm-256color", "bash"]
-    }
-  },
-  "editor.formatOnSave": true,
-  "settingsSync.ignoredExtensions": [
-    "asvetliakov.vscode-neovim",
-    "nagytech.harpoon"
-  ],
-  "emmet.includeLanguages": {
-    "njk": "html",
-    "liquid": "html"
-  },
-  "eslint.run": "onSave",
-  "nxConsole.showNodeVersionOnStartup": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "[python]": {
-    "diffEditor.ignoreTrimWhitespace": false
-  },
-  "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo-1106",
-  "gitlens.advanced.fileHistoryShowAllBranches": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "editor.accessibilitySupport": "off",
-  "workbench.colorTheme": "Everforest Dark",
-  "animations.Install-Method": "Apc Customize UI++",
-  "update.mode": "manual",
-  "apc.imports": [
-    "file://${userHome}/.cursor/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
-  ],
-  "window.customTitleBarVisibility": "windowed",
-  "codeium.enableConfig": {
-    "*": false
-  },
-  "go.inlayHints.assignVariableTypes": true,
-  "go.inlayHints.compositeLiteralFields": true,
-  "go.inlayHints.compositeLiteralTypes": true,
-  "go.inlayHints.constantValues": true,
-  "go.inlayHints.functionTypeParameters": true,
-  "go.inlayHints.rangeVariableTypes": true,
-  "go.inlayHints.parameterNames": true,
-  // "go.inlayHints.assignVariableTypes": false,
-  // "go.inlayHints.compositeLiteralFields": false,
-  // "go.inlayHints.compositeLiteralTypes": false,
-  // "go.inlayHints.constantValues": false,
-  // "go.inlayHints.functionTypeParameters": false,
-  // "go.inlayHints.rangeVariableTypes": false,
-  // "go.inlayHints.parameterNames": false,
-  "workbench.reduceMotion": "on",
-  "todohighlight.isEnable": true,
-  "editor.cursorBlinking": "solid",
-  "everforest.darkContrast": "hard",
-  "everforest.darkCursor": "orange",
-  "todo.embedded.providers.ag.regex": "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|)",
-  "todo.embedded.providers.rg.args": "--ignore-case",
-  "todo.embedded.providers.rg.regex": "(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|WARN)",
-  "todo.embedded.regex": "(?:<!-- *)?(?:#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE|WARN)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|\\{!|\\{\\{!--|\\{\\{!))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^@\\n]+)?))"
+    "eslint.run": "onSave",
+    "nxConsole.showNodeVersionOnStartup": false,
+    "editor.minimap.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.accessibilitySupport": "on",
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalCommandFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineModified": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.terminalBell": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.clear": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "go.formatTool": "gofmt",
+    "go.toolsManagement.autoUpdate": true,
+    "go.vetOnSave": "package",
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "accessibility.signals.progress": {
+        "sound": "off"
+    },
+    "cSpell.userWords": [
+        "godotenv"
+    ],
+    "remote.SSH.defaultExtensions": [
+        "gitpod.gitpod-remote-ssh"
+    ],
+    "remote.SSH.remotePlatform": {
+        "*.gitpod.io": "linux"
+    },
+    "accessibility.signals.voiceRecordingStarted": {
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "sound": "off"
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "accessibility.signals.voiceRecordingStopped"
+    ],
+    "accessibility.signals.voiceRecordingStopped": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalCommandSucceeded": {
+        "sound": "off"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "NikolaosGeorgiou.html-fmt-vscode"
+    },
+    "[gotmpl]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "claude.lang": "en",
+    "pieces.cloudCapabilities": "Blended",
+    "pieces.telemetry": false,
+    "workbench.activityBar.location": "bottom",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "cSpell.enabled": false,
+    "gitlens.mode.active": "zen"
 }

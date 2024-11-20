@@ -1,85 +1,69 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "cmd+m cmd+j",
-    "command": "aichat.close-sidebar"
+    "key": "shift+alt+z",
+    "command": "editor.action.toggleWordWrap"
   },
   {
-    "key": "cmd+m cmd+m",
-    "command": "aichat.open-ai-chat-side-pane"
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
   },
   {
-    "key": "ctrl+n ctrl+m",
-    "command": "toggleVim"
+    "key": "cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+shift+h",
-    "command": "workbench.action.moveEditorLeftInGroup"
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "cmd+r shift+cmd+left",
-    "command": "-workbench.action.moveEditorLeftInGroup"
+    "key": "cmd+h",
+    "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.moveEditorRightInGroup"
+    "key": "cmd+l",
+    "command": "-continue.focusContinueInput"
   },
   {
-    "key": "cmd+r shift+cmd+right",
-    "command": "-workbench.action.moveEditorRightInGroup"
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
   },
   {
-    "key": "cmd+]",
-    "command": "workbench.action.nextEditor"
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
   },
   {
-    "key": "shift+cmd+]",
-    "command": "-workbench.action.nextEditor"
-  },
-  {
-    "key": "cmd+[",
+    "key": "cmd+j",
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "shift+cmd+[",
+    "key": "alt+cmd+left",
     "command": "-workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+shift+]",
-    "command": "editor.action.marker.next",
-    "when": "editorFocus"
+    "key": "cmd+k",
+    "command": "workbench.action.nextEditor"
   },
   {
-    "key": "alt+f8",
-    "command": "-editor.action.marker.next",
-    "when": "editorFocus"
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.nextEditor"
   },
   {
-    "key": "ctrl+shift+[",
-    "command": "editor.action.marker.prev",
-    "when": "editorFocus"
+    "key": "cmd+p",
+    "command": "workbench.action.quickOpen"
   },
   {
-    "key": "shift+alt+f8",
-    "command": "-editor.action.marker.prev",
-    "when": "editorFocus"
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
   },
   {
-    "key": "cmd+e",
-    "command": "workbench.files.action.focusFilesExplorer"
+    "key": "cmd+n cmd+m",
+    "command": "toggleVim"
   },
   {
-    "key": "cmd+[",
-    "command": "-editor.action.outdentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
-    "when": "inQuickOpen && inRecentFilesPicker"
+    "key": "ctrl+cmd+`",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelAlignment == 'center' || panelPosition != 'bottom' && panelPosition != 'top'"
   }
 ]
