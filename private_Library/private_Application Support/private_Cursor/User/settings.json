@@ -66,7 +66,8 @@
         "announcement": "off"
     },
     "accessibility.signals.lineHasFoldedArea": {
-        "sound": "off"
+        "sound": "off",
+        "announcement": "off"
     },
     "accessibility.signals.lineHasBreakpoint": {
         "sound": "off",
@@ -104,7 +105,8 @@
         "announcement": "off"
     },
     "accessibility.signals.notebookCellFailed": {
-        "sound": "off"
+        "sound": "off",
+        "announcement": "off"
     },
     "accessibility.signals.diffLineInserted": {
         "sound": "off"
@@ -150,7 +152,8 @@
         }
     },
     "accessibility.signals.progress": {
-        "sound": "off"
+        "sound": "off",
+        "announcement": "off"
     },
     "cSpell.userWords": [
         "godotenv"
@@ -165,7 +168,8 @@
         "sound": "off"
     },
     "accessibility.signals.positionHasWarning": {
-        "sound": "off"
+        "sound": "off",
+        "announcement": "off"
     },
     "workbench.settings.applyToAllProfiles": [
         "accessibility.signals.voiceRecordingStopped"
@@ -174,7 +178,8 @@
         "sound": "off"
     },
     "accessibility.signals.terminalCommandSucceeded": {
-        "sound": "off"
+        "sound": "off",
+        "announcement": "off"
     },
     "[html]": {
         "editor.defaultFormatter": "NikolaosGeorgiou.html-fmt-vscode"
@@ -190,5 +195,10 @@
         "asvetliakov.vscode-neovim": 1
     },
     "cSpell.enabled": false,
-    "gitlens.mode.active": "zen"
+    "gitlens.mode.active": "zen",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "cody.autocomplete.enabled": false,
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "Kitty.app",
+    "audioCues.enabled": "off"
 }
