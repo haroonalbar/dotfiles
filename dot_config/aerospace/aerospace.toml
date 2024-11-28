@@ -178,6 +178,7 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# $ aerospace list-apps  
 # open Kitty on M
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
@@ -194,12 +195,13 @@ run = "move-node-to-workspace B"
 if.app-id = 'com.pieces.x'
 run = "move-node-to-workspace P"
 
-# open obsidian on N
+# open obsidian on V
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
+run = "move-node-to-workspace V"
+
+# open cursor on N
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = "move-node-to-workspace N"
 
-# open preview on V
-# [[on-window-detected]]
-# if.app-id = "com.apple.Preview"
-# run = "move-node-to-workspace V"
