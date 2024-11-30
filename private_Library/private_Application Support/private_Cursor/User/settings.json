@@ -200,5 +200,9 @@
     "cody.autocomplete.enabled": false,
     "terminal.explorerKind": "external",
     "terminal.external.osxExec": "Kitty.app",
-    "audioCues.enabled": "off"
+    "audioCues.enabled": "off",
+    "leetcode.workspaceFolder": "/Users/haroonalbar/.local/share/nvim/leetcode",
+    "leetcode.defaultLanguage": "golang",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.hint.commentDescription": false
 }
