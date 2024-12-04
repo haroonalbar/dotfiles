@@ -58,7 +58,6 @@
     },
     "eslint.run": "onSave",
     "nxConsole.showNodeVersionOnStartup": false,
-    "editor.minimap.enabled": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.accessibilitySupport": "on",
     "accessibility.signals.lineHasError": {
@@ -204,5 +203,6 @@
     "leetcode.workspaceFolder": "/Users/haroonalbar/.local/share/nvim/leetcode",
     "leetcode.defaultLanguage": "golang",
     "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.commentDescription": false
+    "leetcode.hint.commentDescription": false,
+    "keyrunner-lite-by-liam.folderLocation": "/Users/haroonalbar/Library/Application Support/Code/User/globalStorage/keyrunner-lite-by-liam"
 }
