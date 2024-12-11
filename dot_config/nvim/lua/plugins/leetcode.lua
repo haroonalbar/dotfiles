@@ -14,6 +14,9 @@ return {
     },
     opts = {
       lang = "golang",
+      storage = {
+        home = "~/repos/dsa/leetcode",
+      },
     },
   },
 }
