@@ -18,3 +18,6 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Ensure termguicolors is enabled if not already
 vim.opt.termguicolors = true
+
+-- Set a keymap to toggle oil.nvim
+vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
