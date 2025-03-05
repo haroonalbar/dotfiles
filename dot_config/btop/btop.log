@@ -272,3 +272,13 @@
 
 2024/11/26 (13:09:10) | ===> btop++ v.1.4.0
 2024/11/26 (13:09:10) | ERROR: Stall in Runner thread, restarting!
+
+2025/01/07 (12:24:36) | ===> btop++ v.1.4.0
+2025/01/07 (12:24:36) | WARNING: Failed to set locale en_US.UTF-8 continuing anyway.
+
+2025/01/29 (12:15:20) | ===> btop++ v.1.4.0
+2025/01/29 (12:15:20) | ERROR: Exception during Config::unlock() : _Map_base::at
+
+2025/03/02 (23:37:19) | ===> btop++ v.1.4.0
+2025/03/02 (23:37:19) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
