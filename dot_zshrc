@@ -14,6 +14,10 @@ plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+  ssh
+	colored-man-pages
+  redis-cli
+  starship
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -303,3 +307,37 @@ alias yesdesk='defaults write com.apple.finder CreateDesktop true && killall Fin
 alias hidet='tmux set-option status off'
 alias showt='tmux set-option status on'
 
+# azure iouring
+export GOPRIVATE=dev.azure.com
+# set ticket and commit on it
+
+# Function to set the ticket number
+set_ticket() {
+    if [[ -z $1 ]]; then
+        echo "Usage: set_ticket <ticket_number>"
+        return 1
+    fi
+    export GIT_TICKET_NUMBER="$1"
+    echo "Ticket number set to: $GIT_TICKET_NUMBER"
+}
+
+# Function to commit with the ticket number
+git_commit_with_ticket() {
+    if [[ -z $1 ]]; then
+        echo "Usage: git_commit_with_ticket <message>"
+        return 1
+    fi
+
+    if [[ -z $GIT_TICKET_NUMBER ]]; then
+        echo "Error: Ticket number not set. Use set_ticket <ticket_number> to initialize."
+        return 1
+    fi
+
+    # Append the ticket number to the commit message
+    git commit -m "$1 #$GIT_TICKET_NUMBER"
+}
+
+# Optionally, make aliases for convenience
+alias gct="set_ticket"
+alias gcm="git_commit_with_ticket"
+source <(fzf --zsh)
