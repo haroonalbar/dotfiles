@@ -59,7 +59,7 @@
     "eslint.run": "onSave",
     "nxConsole.showNodeVersionOnStartup": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.accessibilitySupport": "on",
+    "editor.accessibilitySupport": "off",
     "accessibility.signals.lineHasError": {
         "sound": "off",
         "announcement": "off"
@@ -194,7 +194,6 @@
         "asvetliakov.vscode-neovim": 1
     },
     "cSpell.enabled": false,
-    "gitlens.mode.active": "zen",
     "editor.inlineSuggest.suppressSuggestions": true,
     "cody.autocomplete.enabled": false,
     "terminal.explorerKind": "external",
@@ -204,5 +203,8 @@
     "leetcode.defaultLanguage": "golang",
     "leetcode.hint.configWebviewMarkdown": false,
     "leetcode.hint.commentDescription": false,
-    "keyrunner-lite-by-liam.folderLocation": "/Users/haroonalbar/Library/Application Support/Code/User/globalStorage/keyrunner-lite-by-liam"
+    "keyrunner-lite-by-liam.folderLocation": "/Users/haroonalbar/Library/Application Support/Code/User/globalStorage/keyrunner-lite-by-liam",
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "markdown-preview-enhanced.enablePreviewZenMode": true,
+    "cody.commandCodeLenses": true
 }
