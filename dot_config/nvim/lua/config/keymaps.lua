@@ -11,11 +11,13 @@
 -- Move current tab to the right
 -- vim.api.nvim_set_keymap("n", "<leader>>", ":+tabmove<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "H", "<Cmd>BufferPrevious<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "L", "<Cmd>BufferNext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "H", "<Cmd>bp<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "L", "<Cmd>bn<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-Space>", "<Cmd>b#<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>j", "<Cmd>BufferMovePrevious<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>k", "<Cmd>BufferMoveNext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gD", "<Cmd>FzfLua lsp_references<CR>", { noremap = true, silent = true })
 
 -- Keep the function local
 local function toggle_statusbar()

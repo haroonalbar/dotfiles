@@ -9,13 +9,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {
-    "thenewvu/vim-colors-arthur",
-    priority = 1000, -- Load this before other plugins
-    config = function()
-      vim.cmd.colorscheme("arthur")
-    end,
-  },
+  -- {
+  --   "thenewvu/vim-colors-arthur",
+  --   priority = 1000, -- Load this before other plugins
+  --   config = function()
+  --     vim.cmd.colorscheme("arthur")
+  --   end,
+  -- },
   {
     "lualine",
     sections = {
