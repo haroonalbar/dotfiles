@@ -38,3 +38,11 @@ vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory
 --     vim.keymap.del("n", "o", { buffer = true }) -- Remove the 'o' mapping in ChangeLog
 --   end,
 -- })
+
+-- lua/config/lazyvim_custom/init.lua or wherever you configure LSPs
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function()
+    require("jdtls").start_or_attach(config)
+  end,
+})
