@@ -2,6 +2,7 @@ export EDITOR="nvim"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
 # soruce zinit
 # source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
 
@@ -63,12 +64,13 @@ export LANG=en_US.UTF-8
 
 
 #short cuts 
-alias 'lg'='lazygit'
+alias 'lg'='lazygit --debug | tee ~/lazygit-debug.log'
 # alias 'jsb'='js-beautify'
-# alias killnvim='ps -ef | grep "nvim" | grep -v grep | awk '{print $2}' | xargs kill -s KILL'
+alias killnvim='ps -ef | grep "nvim" | grep -v grep | awk '{print $2}' | xargs kill -s KILL'
 # spotx
 alias spotx='bash <(curl -sSL https://spotx-official.github.io/run.sh)'
 alias leet='nvim leetcode.nvim'
+alias findimg='find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" -o -iname "*.webp" -o -iname "*.svg" -o -iname "*.html" \) | fzf'
 
 delete() {
   for file in "$@"; do
@@ -227,6 +229,8 @@ alias showt='tmux set-option status on'
 # Homebrew for WSL
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/opt/go@1.21/bin/:$PATH"
+
 
 # go bin
 export PATH="/home/haroon/go/bin:$PATH"
@@ -234,8 +238,12 @@ export PATH="/home/haroon/go/bin:$PATH"
 # home .bin
 export PATH="/home/haroon/.bin:$PATH"
 
+
 # azure iouring
 export GOPRIVATE=dev.azure.com
+
+# cache
+export GOMODCACHE=$(go env GOMODCACHE)
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -262,12 +270,44 @@ esac
 
 # Function to set the ticket number
 set_ticket() {
+    local ticket_file="$HOME/.git_ticket_info"
+
+    # Load from file if no arguments provided
     if [[ -z $1 ]]; then
-        echo "Usage: set_ticket <ticket_number>"
+        if [[ -f $ticket_file ]]; then
+            source "$ticket_file"
+            echo "Ticket: $GIT_TICKET_NUMBER"
+            echo "Msg: $GIT_TICKET_MSG"
+        else
+            echo "No ticket information saved."
+        fi
         return 1
     fi
+
+    # Validate ticket number
+    if [[ ! $1 =~ ^[0-9]+$ ]]; then
+        echo "<ticket_number> should be a number"
+        return 1
+    fi
+
+    # Set and export ticket number
     export GIT_TICKET_NUMBER="$1"
+
+    # Set and export message if provided
+    if [[ -n $2 ]]; then
+        export GIT_TICKET_MSG="$2"
+    else
+        export GIT_TICKET_MSG=""
+    fi
+
+    # Save to file
+    {
+        echo "export GIT_TICKET_NUMBER=\"$GIT_TICKET_NUMBER\""
+        echo "export GIT_TICKET_MSG=\"$GIT_TICKET_MSG\""
+    } > "$ticket_file"
+
     echo "Ticket number set to: $GIT_TICKET_NUMBER"
+    [[ -n $GIT_TICKET_MSG ]] && echo "Message: $GIT_TICKET_MSG"
 }
 
 # Function to commit with the ticket number
@@ -276,7 +316,6 @@ git_commit_with_ticket() {
         echo "Usage: git_commit_with_ticket <message>"
         return 1
     fi
-
     if [[ -z $GIT_TICKET_NUMBER ]]; then
         echo "Error: Ticket number not set. Use set_ticket <ticket_number> to initialize."
         return 1
@@ -294,3 +333,40 @@ alias gcm="git_commit_with_ticket"
 # export PATH="${HOME}/.local/bin":${PATH}
 #
 source <(fzf --zsh)
+
+# BASH
+#
+# exercism () {
+#     local out
+#     readarray -t out < <(command exercism "$@")
+#     printf '%s\n' "${out[@]}"
+#     if [[ $1 == "download" && -d "${out[-1]}" ]]; then
+#         cd "${out[-1]}" || return 1
+#     fi
+# }
+#
+exercism() {
+    local out
+    out=("${(@f)$(command exercism "$@")}")  # Capture output as an array, splitting on newlines
+    printf '%s\n' "${out[@]}"
+    
+    if [[ $1 == "download" && -d "${out[-1]}" ]]; then
+        cd "${out[-1]}" || return 1
+    fi
+}
+
+alias durls='urls.sh'
+alias open='explorer.exe'
+alias rgs="rg --no-heading --line-number --color=always '' | fzf --ansi --delimiter : --preview 'bat --style=numbers --color=always {1} --line-range {2}:' --bind 'enter:execute(nvim +{2} {1})'"
+export PATH="/home/linuxbrew/.linuxbrew/opt/go@1.21/bin:$PATH"
+# alias lint='nodemon --watch src --ext go --exec "golangci-lint run -c .golint.yml --fix"'
+alias lint='nodemon --watch src --ext go --exec "lint.sh"'
+alias lintfix='golangci-lint run -c .golint.yml --fix'
+
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
