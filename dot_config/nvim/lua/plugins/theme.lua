@@ -40,11 +40,11 @@ return {
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       -- vim.g.everforest_enable_italic = true
-      -- vim.g.everforest_colors_override = {
-      --   bg_dim = "#1F1F1F", -- sidebars
-      --   bg0 = "#1F1F1F", -- bg
-      --   bg2 = "#1F1F1F", -- terminal
-      -- }
+      vim.g.everforest_colors_override = {
+        bg_dim = "#1F1F1F", -- sidebars
+        bg0 = "#1F1F1F", -- bg
+        bg2 = "#1F1F1F", -- terminal
+      }
       vim.cmd("colorscheme everforest")
     end,
   },

@@ -15,7 +15,10 @@ return {
     opts = {
       lang = "golang",
       storage = {
-        home = "~/repos/test/leetcode",
+        home = "/home/haroon/repos/learn/leetcode",
+      },
+      plugins = {
+        non_standalone = true,
       },
     },
   },

@@ -4,6 +4,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       keywords = {
+        NOTE = { alt = { "NOTES" } },
         WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX", "WHY", "DEBUG" } },
         FIX = {
           icon = " ", -- icon used for the sign, and in search results
