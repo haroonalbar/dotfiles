@@ -1,7 +1,7 @@
 export EDITOR="nvim"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export ZEIT_DB="~/.config/zeit/zeit.db"
 
 # soruce zinit
 # source /home/linuxbrew/.linuxbrew/opt/zinit/zinit.zsh
@@ -230,6 +230,7 @@ alias showt='tmux set-option status on'
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/opt/go@1.21/bin/:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/Cellar/jdtls/1.50.0/bin:$PATH"
 
 
 # go bin
@@ -237,6 +238,8 @@ export PATH="/home/haroon/go/bin:$PATH"
 
 # home .bin
 export PATH="/home/haroon/.bin:$PATH"
+
+# export PATH="$HOME/.npm-global/bin:$PATH"
 
 
 # azure iouring
@@ -370,3 +373,11 @@ alias lintfix='golangci-lint run -c .golint.yml --fix'
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+
+
+
+# zeit
+# source <(zeit completion bash)
+export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
