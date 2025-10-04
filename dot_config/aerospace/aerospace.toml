@@ -66,6 +66,12 @@ outer.bottom = -1
 # 'main' binding mode must be always presented
 [mode.main.binding]
 
+# Switch focus between monitors
+alt-o = 'focus-monitor --wrap-around next'
+
+# OR move the current workspace to the other monitor
+alt-shift-o = 'move-workspace-to-monitor --wrap-around next'
+
 # All possible keys:
 # - Letters.        a, b, c, ..., z
 # - Numbers.        0, 1, 2, ..., 9
@@ -210,3 +216,4 @@ run = "move-node-to-workspace N"
 # [[on-window-detected]]
 # if.app-id = 'org.godotengine.Godot'
 # run = "layout floating tiling", # Switch to floating layout
+
