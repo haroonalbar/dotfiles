@@ -13,8 +13,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	git
   direnv
-	zsh-syntax-highlighting
-	zsh-autosuggestions
+	# zsh-syntax-highlighting
+	# zsh-autosuggestions
   ssh
 	colored-man-pages
   redis-cli
@@ -22,7 +22,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.ani-cli.zsh
+# source $HOME/.ani-cli.zsh
 
 export LANG=en_US.UTF-8
 
@@ -248,8 +248,8 @@ export PATH=$PATH:/Users/haroonalbar/go/bin
 # for tailwind cli
 export PATH=$PATH:/Users/haroonalbar/bin
 
-# deno
-. "/Users/haroonalbar/.deno/env"
+# # deno
+# . "/Users/haroonalbar/.deno/env"
 
 
 # # Define the work function
@@ -342,3 +342,4 @@ git_commit_with_ticket() {
 alias gct="set_ticket"
 alias gcm="git_commit_with_ticket"
 source <(fzf --zsh)
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
