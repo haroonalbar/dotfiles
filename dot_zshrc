@@ -70,6 +70,7 @@ load-nvmrc
 
 #short cuts 
 alias 'lg'='lazygit'
+alias 'ld'='lazydocker'
 # alias 'jsb'='js-beautify'
 alias killnvim='ps -ef | grep "nvim" | grep -v grep | awk '{print $2}' | xargs kill -s KILL'
 # spotx
@@ -238,16 +239,21 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export PATH=${PATH}:/usr/local/mysql/bin/
 
 # golang
-# export GOPATH=$HOME/go
-# export GOROOT=/usr/local/go
-# export GOBIN=$GOPATH/bin
-# export PATH=$PATH:$GOPATH
-# export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export GOBIN=$GOPATH/bin
+export GOPRIVATE=github.com/devrev/*
+export GO111MODULE=on
+export GOPROXY=direct
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Users/haroonalbar/go/bin
 
 # for tailwind cli
 export PATH=$PATH:/Users/haroonalbar/bin
 
+# Local bin
+export PATH=$PATH:$HOME/.bin
 # # deno
 # . "/Users/haroonalbar/.deno/env"
 
@@ -308,8 +314,6 @@ alias yesdesk='defaults write com.apple.finder CreateDesktop true && killall Fin
 alias hidet='tmux set-option status off'
 alias showt='tmux set-option status on'
 
-# azure iouring
-export GOPRIVATE=dev.azure.com
 # set ticket and commit on it
 
 # Function to set the ticket number
@@ -335,7 +339,7 @@ git_commit_with_ticket() {
     fi
 
     # Append the ticket number to the commit message
-    git commit -m "$1 #$GIT_TICKET_NUMBER"
+    git commit -m "$1 (#$GIT_TICKET_NUMBER)"
 }
 
 # Optionally, make aliases for convenience
@@ -343,3 +347,7 @@ alias gct="set_ticket"
 alias gcm="git_commit_with_ticket"
 source <(fzf --zsh)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export GITHUB_ACCESS_TOKEN=$(gh auth token)
+ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
+alias grep='grep --color=auto'
