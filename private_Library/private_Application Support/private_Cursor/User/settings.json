@@ -206,5 +206,9 @@
     "keyrunner-lite-by-liam.folderLocation": "/Users/haroonalbar/Library/Application Support/Code/User/globalStorage/keyrunner-lite-by-liam",
     "markdown-preview-enhanced.previewTheme": "atom-dark.css",
     "markdown-preview-enhanced.enablePreviewZenMode": true,
-    "cody.commandCodeLenses": true
+    "cody.commandCodeLenses": true,
+    "window.commandCenter": true,
+    "makefile.configureOnOpen": true,
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": false
 }

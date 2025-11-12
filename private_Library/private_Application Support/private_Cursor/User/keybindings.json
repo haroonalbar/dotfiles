@@ -69,5 +69,15 @@
   {
     "key": "cmd+i",
     "command": "composerMode.agent"
+  },
+  {
+    "key": "cmd+d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && !inReferenceSearchEditor && !isInEmbeddedEditor"
   }
 ]
