@@ -16,7 +16,7 @@ return {
 
       -- Behavior settings
       behaviour = {
-        auto_suggestions = false, -- Disable auto-suggestions to avoid high API usage
+        auto_suggestions = true, -- Disable auto-suggestions to avoid high API usage
         auto_set_highlight_group = true,
         auto_set_keymaps = true,
         auto_apply_diff_after_generation = false,
@@ -27,7 +27,7 @@ return {
       windows = {
         position = "right", -- Position of the sidebar
         wrap = true, -- Enable text wrapping
-        width = 30, -- Width as percentage of available space
+        width = 50, -- Width as percentage of available space
         sidebar_header = {
           align = "center", -- Center align the header
           rounded = true,
