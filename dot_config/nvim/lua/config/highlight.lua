@@ -1,0 +1,1 @@
+-- Ensure termguicolors is enabled if not already
