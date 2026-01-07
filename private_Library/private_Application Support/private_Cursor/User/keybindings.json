@@ -79,5 +79,85 @@
     "key": "cmd+r",
     "command": "editor.action.goToReferences",
     "when": "editorHasReferenceProvider && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+r cmd+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+r cmd+right",
+    "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+r cmd+down",
+    "command": "-workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+r cmd+up",
+    "command": "-workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "ctrl+a s",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+,",
+    "command": "workbench.action.toggleZenMode",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "cmd+r z",
+    "command": "-workbench.action.toggleZenMode",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "cmd+g e",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+f8",
+    "command": "-editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+g shift+e",
+    "command": "editor.action.marker.prev",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+f8",
+    "command": "-editor.action.marker.prev",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
   }
 ]

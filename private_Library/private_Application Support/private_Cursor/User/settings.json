@@ -45,8 +45,8 @@
             ]
         }
     },
-    "workbench.colorTheme": "Everforest Dark",
-    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "diffEditor.ignoreTrimWhitespace": true,
     "editor.formatOnSave": true,
     "settingsSync.ignoredExtensions": [
         "asvetliakov.vscode-neovim",
@@ -209,6 +209,6 @@
     "cody.commandCodeLenses": true,
     "window.commandCenter": true,
     "makefile.configureOnOpen": true,
-    "git.blame.editorDecoration.enabled": true,
+    "git.blame.editorDecoration.enabled": false,
     "git.blame.statusBarItem.enabled": false
 }
