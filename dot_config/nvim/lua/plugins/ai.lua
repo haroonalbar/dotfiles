@@ -16,11 +16,11 @@ return {
 
       -- Behavior settings
       behaviour = {
-        auto_suggestions = true, -- Disable auto-suggestions to avoid high API usage
-        auto_set_highlight_group = true,
-        auto_set_keymaps = true,
-        auto_apply_diff_after_generation = false,
-        support_paste_from_clipboard = false,
+        auto_suggestions = false, -- Disable auto-suggestions
+        -- auto_set_highlight_group = true,
+        -- auto_set_keymaps = true,
+        -- auto_apply_diff_after_generation = false,
+        -- support_paste_from_clipboard = false,
       },
 
       -- Window configuration
@@ -73,6 +73,10 @@ return {
           -- Use ACP (Agent Client Protocol) for auggie
           __acp = true,
         },
+        opencode = {
+          -- Use ACP (Agent Client Protocol) for opencode
+          __acp = true,
+        },
         claude = {
           endpoint = "https://api.anthropic.com",
           model = "claude-3-5-sonnet-20241022",
@@ -88,6 +92,12 @@ return {
         auggie = {
           command = "auggie",
           args = { "--acp" }, -- Use ACP mode
+        },
+
+        ["opencode"] = {
+          command = "opencode",
+          args = { "acp" },
+          -- Uses AWS Bedrock via "aws sso login" - no API key needed
         },
       },
 

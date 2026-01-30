@@ -45,7 +45,8 @@ return {
         bg0 = "#1F1F1F", -- bg
         bg2 = "#1F1F1F", -- terminal
       }
-      vim.cmd("colorscheme everforest")
+      -- vim.cmd("colorscheme everforest")
+      vim.cmd("colorscheme miniautumn")
     end,
   },
 }
